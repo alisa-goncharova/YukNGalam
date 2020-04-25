@@ -12,7 +12,7 @@ gulp.task('sass', function () {
 });
 // автоатическое сравнение sass
 gulp.task('default', function () {
-  gulp.watch('./src/sass/', gulp.series('sass', 'browser-sync'));
+  gulp.watch('./src/sass/', gulp.series('sass'));
 });
 
 
@@ -20,9 +20,12 @@ gulp.task('default', function () {
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
-            baseDir: "./src/index.html"
+            baseDir: "./src/"
         }
     });
 });
+
+
+
 
 

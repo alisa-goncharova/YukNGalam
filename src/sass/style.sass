@@ -1,16 +1,114 @@
-body
-	color: red
-header
-	position: absolute	
-.wrapper 
-	max-width: 1400px
-.container
-	max-width: 960px
-.class
-	color: red
-.class2
-	color: blue
-.class3
-	color: red
-.class-4
-	color: red
+@import "../scss/fonts.scss"
+body, html, ul, p 
+	margin: 0
+	padding: 0
+body 
+	position: relative
+	font-size: 13px
+	font-family: 'Roboto', sans-serif
+	width: 100%
+.wrapper
+	max-width: 1440px
+	margin-top: 0
+	margin-bottom: 0
+	margin-right: auto
+	margin-left: auto 
+.container 
+	max-width: 1290px
+	margin-top: 0
+	margin-bottom: 0
+	margin-right: auto
+	margin-left: auto 
+	padding-left: 30px
+	padding-right: 30px
+.row 
+	display: flex
+	flex-wrap: wrap 
+	margin-right: -30px
+	margin-left: -30px
+	align-items: center
+	padding-top: 40px
+header 
+	background-color: #9bddd8
+	background-image: url('../img/header/header-background.png')
+	height: 640px
+	background-position: center
+	background-repeat: no-repeat
+	width: 100%
+
+.logo
+	margin-left: 135px
+	p 
+		color: #fff
+		font-size: 23px
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 600
+		span 
+			font-weight: 400
+nav 
+	margin-left: 220px
+	ul
+		align-items: center
+		display: flex
+		list-style: none
+		li
+			padding: 10px
+			border: 2px solid rgba(255,255,255, 0)
+			border-radius: 20px 20px 
+			margin-left: 30px
+			transition: 0.5s
+			a 
+ 
+				text-decoration: none
+				display: block
+				color: #fff
+				font-size: 14px
+				font-family: 'Lato', sans-serif
+				font-weight: 400
+			&:hover
+				border-color: rgba(255,255,255, 1)
+.header-bottom
+	margin-top: 100px
+	padding-bottom: 300px
+	&-inner 
+		text-align: center
+	&__title 
+		p 
+			text-transform: uppercase
+			color: #fff
+			font-family: 'ChunkFive'
+			font-size: 80px
+			// font-weight: 900
+			span 
+				color: #01a2a6
+	&__subtitle
+		padding-top: 20px
+		p 
+			color: #fff
+			font-size: 18px
+			font-family: 'Lato', sans-serif
+			line-height: 35px
+	&__btn 
+		margin-top: 35px
+		padding-left: 30px
+		padding-right: 30px
+		padding-top: 27px
+		padding-bottom: 27px
+		margin-left: auto
+		margin-right: auto
+		background-color: #ffffa6
+		border-radius: 40px 40px
+		width: 160px
+		p 
+			a 
+				text-decoration: none
+				color: black
+				font-family: 'Lato', sans-serif
+				font-size: 16px
+				font-weight: 900
+				text-transform: uppercase
+		&:hover 
+			background-color: #dede8e
+			transition: 0.5s
+
+
