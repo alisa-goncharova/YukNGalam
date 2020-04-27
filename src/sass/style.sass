@@ -7,6 +7,7 @@ body
 	font-size: 13px
 	font-family: 'Roboto', sans-serif
 	width: 100%
+	line-height: 1 
 .wrapper
 	max-width: 1440px
 	margin-top: 0
@@ -27,17 +28,27 @@ body
 	margin-right: -30px
 	margin-left: -30px
 	align-items: center
-	padding-top: 40px
 header 
 	background-color: #9bddd8
 	background-image: url('../img/header/header-background.png')
-	height: 640px
+	// height: 640px
 	background-position: center
 	background-repeat: no-repeat
+	background-size: cover
 	width: 100%
-
+.header-top 
+	padding-top: 40px
+	.row 
+		display: block
+	&__inner
+		padding-left: 60px
+		padding-right: 160px
+		display: flex 
+		align-items: center
+		justify-content: space-between
+		
 .logo
-	margin-left: 135px
+	// margin-left: 135px
 	p 
 		color: #fff
 		font-size: 23px
@@ -46,7 +57,7 @@ header
 		span 
 			font-weight: 400
 nav 
-	margin-left: 220px
+	// margin-left: 220px
 	ul
 		align-items: center
 		display: flex
@@ -68,11 +79,15 @@ nav
 			&:hover
 				border-color: rgba(255,255,255, 1)
 .header-bottom
-	margin-top: 100px
+	padding-top: 100px
 	padding-bottom: 300px
 	&-inner 
 		text-align: center
+		max-width: 660px
+		margin-right: auto
+		margin-left: auto
 	&__title 
+		margin-bottom: 20px
 		p 
 			text-transform: uppercase
 			color: #fff
@@ -82,7 +97,6 @@ nav
 			span 
 				color: #01a2a6
 	&__subtitle
-		padding-top: 20px
 		p 
 			color: #fff
 			font-size: 18px
