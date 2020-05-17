@@ -1,5 +1,5 @@
 @import "../scss/fonts.scss"
-body, html, ul, p 
+body, html, ul, p, label, form 
 	margin: 0
 	padding: 0
 body 
@@ -14,7 +14,7 @@ body
 	margin-bottom: 0
 	margin-right: auto
 	margin-left: auto 
-.container 
+.container, .about, .contact, .info, footer, .destination
 	max-width: 1290px
 	margin-top: 0
 	margin-bottom: 0
@@ -31,7 +31,6 @@ body
 header 
 	background-color: #9bddd8
 	background-image: url('../img/header/header-background.png')
-	// height: 640px
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
@@ -48,7 +47,6 @@ header
 		justify-content: space-between
 		
 .logo
-	// margin-left: 135px
 	p 
 		color: #fff
 		font-size: 23px
@@ -57,7 +55,6 @@ header
 		span 
 			font-weight: 400
 nav 
-	// margin-left: 220px
 	ul
 		align-items: center
 		display: flex
@@ -93,17 +90,16 @@ nav
 			color: #fff
 			font-family: 'ChunkFive'
 			font-size: 80px
-			// font-weight: 900
 			span 
 				color: #01a2a6
 	&__subtitle
+		margin-bottom: 35px
 		p 
 			color: #fff
 			font-size: 18px
 			font-family: 'Lato', sans-serif
 			line-height: 35px
 	&__btn 
-		margin-top: 35px
 		padding-left: 30px
 		padding-right: 30px
 		padding-top: 27px
@@ -118,11 +114,341 @@ nav
 				text-decoration: none
 				color: black
 				font-family: 'Lato', sans-serif
-				font-size: 16px
 				font-weight: 900
 				text-transform: uppercase
 		&:hover 
 			background-color: #dede8e
 			transition: 0.5s
+.about 
+	background-color: #fff
+	padding-top: 70px
+	max-width: 1230px
+	padding-right: 60px
+	padding-left: 60px
+	padding-bottom: 110px
+	display: flex
+	justify-content: center
+	&-image
+		float: left
+		padding-right: 100px
+	&-block 
+		display: flex 
+		flex-direction: column
+		&__title 
+			padding-bottom: 70px
+			p 
+				font-size: 60px
+				font-family: 'ChunkFive'
+				color: #29d9c2
+				span 
+					color: #01a2a6
+		&__subtitle
+			p
+				font-family: 'Lato', sans-serif
+				font-weight: 400 
+				font-family: 16px
+				line-height: 35px
+				color: #9b9b9b
+	&:before 
+		content: ''
+		width: 80%
+		height: 45px
+		position: absolute  
+		background-color: #fff
+		transform: translateY(-100px) 
+		opacity: 0.9
+.contact 
+	background-image: url('../img/contact/contact.png')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: #34b5b8
+	padding-top: 90px
+	padding-bottom: 80px
+	&-title 
+		padding-bottom: 110px
+		text-align: center
+		p 
+			font-family: 'ChunkFive'
+			font-size: 67px
+			color: #fff 
+	&-container
+		display: flex
+		justify-content: space-between
+		padding-left: 60px
+		padding-right: 60px
+	&-form
+		form 
+			display: flex
+			flex-direction: column
+		input
+			width: 470px
+			height: 55px
+			border: 0
+			border-radius: 5px 5px 5px 5px
+			&::placeholder 
+				color: #bdbdbd
+				padding-left: 25px
+				font-family: 'Lato', sans-serif
+				font-size: 14px 
+		textarea 
+			width: 465px 
+			height: 100px
+			border: 0
+			border-radius: 5px 5px 5px 5px
+			&::placeholder 
+				color: #bdbdbd
+				padding-left: 25px
+				padding-top: 25px
+				font-family: 'Lato', sans-serif
+				font-size: 14px 
+		&__item
+			margin-bottom: 20px
+		&__btn
+			display: flex
+			justify-content: flex-end
+			input
+				background-color: #b4ec84
+				color: #fff
+				border-radius: 40px 40px
+				width: 160px
+				height: 67px
+				&:hover 
+					background-color: #a1cf7a
+			
+		.inline 
+			display: flex
+		#copmpany
+			width: 225px
+			margin-right: 20px 
+		#subject
+			width: 225px
+	&-block 
+		&-title
+			padding-bottom: 60px 
+			p 
+				font-size: 45px
+				font-family: 'Lato', sans-serif
+				font-weight: 300
+				color: #fff
+		&-subtitle 
+			&__item
+				padding-bottom: 15px
+				display: flex
+				p 
+					color: #fff
+					font-size: 12px
+					font-weight: 400
+				img 
+					padding-right: 10px 
+.info
+	background: rgb(189,242,113)
+	background: linear-gradient(60deg, rgba(189,242,113,1) 50%, rgba(177,229,104,1) 50%)
+	padding-top: 65px
+	padding-bottom: 65px
+	display: flex
+	// justify-content: center
+	align-items: center
+	justify-content: space-between
+	padding-left: 60px 
+	padding-right: 60px
+	&-content 
+		&-title
+			padding-bottom: 15px 
+			p 
+				font-family: 'ChunkFive'
+				font-size: 67px 
+				color: #fff
+		&-subtitle 
+			p 
+				font-family: 'Lato', sans-serif
+				font-size: 16px 
+				color: #fff
+	&-block 
+		display: flex
+		&-message 
+			padding-bottom: 10px
+			input
+				height: 71px
+				width: 400px
+				border: 1px solid #7ca83f
+				border-radius: 5px 0 0 5px 
+				&::placeholder 
+					font-family: 'Lato', sans-serif
+					font-size: 16px
+					padding-left: 28px
+					color: #cbcbcb
+		&-btn
+			z-index: 3 
+			input 
+				border: 0
+				height: 75px
+				width: 70px
+				border-radius: 0 5px 5px 0
+				background-color: #01a2a6
+				color: #fff
+				font-size: 25px 
+				&:hover 
+					background-color: #04888b
+		
+footer 
+	background-color: #2f2933
+	background-image: url('../img/footer/backgraund-image.png')
+	background-position: bottom
+	background-repeat: no-repeat
+.footer
+	&-block
+		display: flex
+		justify-content: space-between
+		padding-top: 25px
+		padding-bottom: 250px
+		padding-right: 60px 
+		padding-left: 60px
+	&-list 
+		ul
+			color: #5d5c5c
+			border: none
+			display: flex
+			li
+				margin-left: 10px
+				padding-right: 10px 
+				a
+					font-size: 12px 
+					font-family: 'Lato', sans-serif 
+					text-decoration: none
+					color: #5d5c5c 
+	&-icon
+		text-align: center
+		flex-wrap: wrap
+		display: flex 
+		justify-content: flex-end
+		&__item
+			background-color: #3d3741 
+			border: 1px solid #3d3741
+			border-radius: 50%
+			height: 30px
+			width: 30px
+			margin-right: 10px
+			a
+				text-align: center 
+				img 
+					width: 15px 
+					position: relative
+					top: 7px
+					
+// потом переместить
+.destination
+	background-color: #f2fefe
+	padding-top: 75px
+	padding-bottom: 75px
+	padding-right: 60px
+	padding-left: 60px
+	max-width: 1230px
+	&-top
+		display: flex
+		justify-content: space-around
+		// flex-wrap: wrap
+		// width: calc(100%/2)
+		&-left 
+		&__title
+			padding-bottom: 75px 
+			p
+				font-size: 60px
+				font-family: 'ChunkFive'
+				color: #29d9c2
+				span 
+					color: #01a2a6
+		&__subtitle
+			padding-bottom: 75px 
+			p
+				font-family: 'Lato', sans-serif
+				font-weight: 400 
+				font-family: 16px
+				line-height: 35px
+				color: #9b9b9b
+		&-right
+		&__information
+			display: flex
+			padding-bottom: 25px
+			align-items: center  
+			p
+				font-family: 'Lato', sans-serif
+				font-weight: 400 
+				font-size: 16px
+				line-height: 35px
+				color: #d2d9d9
+			img 
+				width: 15px
+				padding-right: 15px
+	&-source
+		display: flex
+		justify-content: space-between
+		padding-bottom: 20px
+		&-search
+			input 
+				width: 235px
+				height: 40px
+				border: 1px solid #eaeaea
+				border-radius: 40px 40px
+				&::placeholder
+					color: #b5b5b5
+					font-size: 16px
+					padding-left: 28px
+				// &:active 
+				// 	color: none
+				// 	border: none
+		&-sort
+			display: flex
+			p 
+				font-family: 'Lato', sans-serif
+				font-size: 16px
+				color: #aeaeae
+				&:hover
+					color: #777777
+					transition: 0.3s
+	&-bottom
+		margin-top: 20px
+		margin-bottom: 80px
+		&__item
+			// padding-left: 30px
+			display: flex 
+			margin-bottom: 30px
+			background-color: #85dbf2
+			background-position: center 
+			background-repeat: no-repeat
+			background-size: cover
+			justify-content: flex-end
+			&-content
+				display: flex
+				flex-direction: column 
+				justify-content: center  
+				background-color: rgba(244,249,251,0.9)
+				padding-right: 30px
+				padding-left: 30px
+				justify-content: flex-end
+				span 
+					font-family: Lato, sans-serif
+					font-size: 30px 
+					color: #32b3b7
+					padding-bottom: 25px
+				p
+					font-family: Lato, sans-serif
+					font-size: 16px 
+					color: #999a9b
+					line-height: 35px
+				img 
+					width: 65px
+					padding-top: 50px
+					padding-bottom: 40px
+			&:nth-child(1)
+				background-image: url('../img/destination/Batu-img.png')
+			&:nth-child(2)
+				justify-content: flex-start
+				background-image: url('../img/destination/bromo-img.png')
+			&:nth-child(3)
+				background-image: url('../img/destination/biru-img.png')
+
+				
+
 
 
