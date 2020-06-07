@@ -1,20 +1,34 @@
 @import "../scss/fonts.scss"
-body, html, ul, p, label, form 
+body, html, ul, p, label, form,input 
 	margin: 0
 	padding: 0
+	border: 0
 body 
 	position: relative
 	font-size: 13px
 	font-family: 'Roboto', sans-serif
 	width: 100%
-	line-height: 1 
+	line-height: 1
+body 
+::-webkit-scrollbar
+	width: 15px
+::-webkit-scrollbar-track
+	background-color: rgba(155,221,216,0.2)
+	opacity: 0.3 
+::-webkit-scrollbar-thumb 
+	background-color: rgba(255,255,166,0.5)
+::-webkit-scrollbar-thumb:hover 
+	background-color: rgba(195,243,127,0.2)
+	transition: 0.3 
+html
+	scroll-behavior: smooth
 .wrapper
-	max-width: 1440px
+	//max-width: 1440px
 	margin-top: 0
 	margin-bottom: 0
 	margin-right: auto
 	margin-left: auto 
-.container, .about, .contact, .info, footer, .destination
+.container, .about, .destination
 	max-width: 1290px
 	margin-top: 0
 	margin-bottom: 0
@@ -207,7 +221,11 @@ nav
 		&__btn
 			display: flex
 			justify-content: flex-end
-			input
+			button
+				-webkit-appearance: none
+				-moz-appearance: none
+				appearance: none
+				border: 0
 				background-color: #b4ec84
 				color: #fff
 				border-radius: 40px 40px
@@ -215,10 +233,13 @@ nav
 				height: 67px
 				&:hover 
 					background-color: #a1cf7a
+					border: 0 
+				&:active
+					border: 0
 			
 		.inline 
 			display: flex
-		#copmpany
+		#company
 			width: 225px
 			margin-right: 20px 
 		#subject
@@ -272,7 +293,7 @@ nav
 				height: 71px
 				width: 400px
 				border: 1px solid #7ca83f
-				border-radius: 5px 0 0 5px 
+				// border-radius: 5px 0 0 5px 
 				&::placeholder 
 					font-family: 'Lato', sans-serif
 					font-size: 16px
@@ -281,8 +302,8 @@ nav
 		&-btn
 			z-index: 3 
 			input 
-				border: 0
-				height: 75px
+				// border: 0
+				height: 73px
 				width: 70px
 				border-radius: 0 5px 5px 0
 				background-color: #01a2a6
@@ -363,7 +384,7 @@ footer
 			p
 				font-family: 'Lato', sans-serif
 				font-weight: 400 
-				font-family: 16px
+				font-size: 16px
 				line-height: 35px
 				color: #9b9b9b
 		&-right
@@ -380,73 +401,123 @@ footer
 			img 
 				width: 15px
 				padding-right: 15px
-	&-source
+	// &-source
+	// 	display: flex
+	// 	justify-content: space-between
+	// 	padding-bottom: 20px
+	// 	&-search
+	// 		input 
+	// 			width: 235px
+	// 			height: 40px
+	// 			border: 1px solid #eaeaea
+	// 			border-radius: 40px 40px
+	// 			&::placeholder
+	// 				color: #b5b5b5
+	// 				font-size: 16px
+	// 				padding-left: 28px
+	// 			// &:active 
+	// 			// 	color: none
+	// 			// 	border: none
+	// 	&-sort
+	// 		display: flex
+	// 		p 
+	// 			font-family: 'Lato', sans-serif
+	// 			font-size: 16px
+	// 			color: #aeaeae
+	// 			&:hover
+	// 				color: #777777
+	// 				transition: 0.3s
+	&-middle 
 		display: flex
-		justify-content: space-between
-		padding-bottom: 20px
-		&-search
-			input 
-				width: 235px
-				height: 40px
-				border: 1px solid #eaeaea
-				border-radius: 40px 40px
-				&::placeholder
-					color: #b5b5b5
-					font-size: 16px
-					padding-left: 28px
-				// &:active 
-				// 	color: none
-				// 	border: none
-		&-sort
-			display: flex
-			p 
-				font-family: 'Lato', sans-serif
-				font-size: 16px
-				color: #aeaeae
-				&:hover
-					color: #777777
-					transition: 0.3s
-	&-bottom
-		margin-top: 20px
-		margin-bottom: 80px
-		&__item
-			// padding-left: 30px
-			display: flex 
-			margin-bottom: 30px
-			background-color: #85dbf2
-			background-position: center 
-			background-repeat: no-repeat
-			background-size: cover
-			justify-content: flex-end
-			&-content
+.destination-sort
+	margin-right: 60px
+	&-title
+		padding-bottom: 40px 
+		p
+			font-size: 36px
+			font-family: 'ChunkFive'
+			color: #29d9c2
+			span
+				color: #01a2a6
+	&-complex
+		&__item 
+			padding-bottom: 15px
+label 
+	color: black
+	font-family: 'Lato', sans-serif
+	font-size: 16px
+.destination
+	&-content
+		// display: flex
+		&-items 
+			// padding-bottom: 60px
+			// flex-wrap: wrap
+			&__item
+				// max-width: 420px
+				margin-right: 30px 
+				text-align: center
 				display: flex
-				flex-direction: column 
-				justify-content: center  
-				background-color: rgba(244,249,251,0.9)
-				padding-right: 30px
-				padding-left: 30px
-				justify-content: flex-end
+				align-items: center
+				background-color: #f5f6f6
+				padding: 10px
+				margin-bottom: 20px
+				transition: all 210ms cubic-bezier(.8, .1, .2, .9)
+				position: relative
+				&:hover 
+					// transition: 0.8s
+					// -webkit-transform: scale(1.2)
+					// -ms-transform: scale(1.2)
+					// transform: scale(1.2)
+					z-index: 1
+					transform: scale(1.1)
+					box-shadow: 0 0 1rem var(--shadow-color)
+				&-image
+					padding-right: 35px
+					img
+						width: 160px
+						height: 110px
+				&-content
+					h3 
+						color: #12a8ac
+						font-family: 'Lato', sans-serif
+						font-size: 20px
+					p 
+						color: #999999
+						line-height: 30px
+						font-size: 16px
 				span 
-					font-family: Lato, sans-serif
-					font-size: 30px 
-					color: #32b3b7
-					padding-bottom: 25px
-				p
-					font-family: Lato, sans-serif
-					font-size: 16px 
-					color: #999a9b
-					line-height: 35px
-				img 
-					width: 65px
-					padding-top: 50px
-					padding-bottom: 40px
-			&:nth-child(1)
-				background-image: url('../img/destination/Batu-img.png')
-			&:nth-child(2)
-				justify-content: flex-start
-				background-image: url('../img/destination/bromo-img.png')
-			&:nth-child(3)
-				background-image: url('../img/destination/biru-img.png')
+					border-radius: 100%
+					width: 20px
+					height: 20px
+					display: inline-block
+					text-align: center
+					background: #fff
+					line-height: 16px
+					position: absolute
+					box-shadow: 0px 0px 0px 2px #fff
+					top: 24px
+					right: 30px
+					svg
+						width: 16px
+						position: absolute
+						left: 2px
+						top: 3px
+						&:hover 
+							fill: #29d9c2
+							transition: 0.5s
+
+				// 	&:hover
+				// 		transition: 0.8s
+				// 		-webkit-transform: scale(0.7)
+				// 		-ms-transform: scale(0.7)
+				// 		transform: scale(0.7)
+				// p 
+				// 	color: #12a8ac
+				// 	font-family: 'Lato', sans-serif
+				// 	font-size: 16px
+
+// .natural
+// 	display: none
 
 				
 
