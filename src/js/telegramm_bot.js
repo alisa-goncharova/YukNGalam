@@ -1,5 +1,6 @@
 	document.querySelector('.button').onclick = function(){
-	let message = '<Message for users:> ' + (document.querySelector('.message').value)+'     ';
+		console.log(12345);
+	let message = '<Message for users:> ' + (document.querySelector('.message').value)+'  ';
 	let company = '<Company:> ' + (document.querySelector('.company').value)+'     ';
 	let subject = '<Subject:> ' + (document.querySelector('.subject').value)+'     ';
 	let email = '<Email:> '+ (document.querySelector('.email').value)+'     ';
